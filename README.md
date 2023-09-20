@@ -37,4 +37,4 @@
 
   
 ## Use
-<p>Finally once you have done all the instalation needed, you can access to the project in <b>localhost:8000</b> </p>
+<p>Finally once you have done all the instalation needed, you can access to the project in <b>localhost:8000/card</b> </p>
