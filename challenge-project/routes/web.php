@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\CardController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -16,3 +18,13 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/card', function(){
+    return view('card');
+});
+
+
+Route::get('/api/test', [CardController::class, 'consumirAPI']);
+Route::get('/api/check_card/{pan}', [CardController::class, 'checkCard']);
+Route::get('/api/check_date/{month}/{year}', [CardController::class, 'checkDate']);
+Route::get('/api/check_cvv/{pan}/{cvv}', [CardController::class, 'checkCVV']);

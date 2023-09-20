@@ -16,3 +16,8 @@
 $router->get('/', function () use ($router) {
     return $router->app->version();
 });
+
+$router->get('/card/ping', 'CardController@ping');
+$router->get('/card/checkDate/{month}/{year}', 'CardController@checkDate');
+$router->get('/card/checkCard/{pan}', 'CardController@checkCard');
+$router->get('/card/checkCVV/{pan}/{cvv}', 'CardController@checkCVV');
