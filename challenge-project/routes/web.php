@@ -16,7 +16,8 @@ use App\Http\Controllers\CardController;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    //return view('welcome');
+    return view('card');
 });
 
 Route::get('/card', function(){
