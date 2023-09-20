@@ -77,4 +77,8 @@ class CardController extends Controller
         }
     }
 
+    public function checkAll(){
+        
+    }
+
 }

@@ -47,9 +47,9 @@ class CardController extends Controller
                 }
             }
             if($count % 10 == 0 || $count % 10 == 10 - ($count % 10)){
-                return response()->json(['status' => 'success', 'message' => 'Valid card']);
+                return response()->json(['status' => 'success', 'message' => 'Valid card (Luhn’s)']);
             }else{
-                return response()->json(['status' => 'failure', 'message' => 'Invalid card']);
+                return response()->json(['status' => 'failure', 'message' => 'Invalid card (Luhn’s)']);
             }
             
         }
@@ -65,11 +65,11 @@ class CardController extends Controller
         }
         if($america){
             if( strlen( (string) $cvv)!=4){
-                return response()->json(['status' => 'failure', 'message' => 'Invalid CVV']);
+                return response()->json(['status' => 'failure', 'message' => 'Invalid CVV (American Express card)']);
             }
         }else{
             if( strlen( (string) $cvv)!=3){
-                return response()->json(['status' => 'failure', 'message' => 'Invalid CVV']);
+                return response()->json(['status' => 'failure', 'message' => 'Invalid CVV (Not American Express card)']);
             }
         }
         return response()->json(['status' => 'success', 'message' => 'Valid CVV']);

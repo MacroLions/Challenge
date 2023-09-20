@@ -14,7 +14,7 @@
 */
 
 $router->get('/', function () use ($router) {
-    return $router->app->version();
+    return "Hello Api!";
 });
 
 $router->get('/card/ping', 'CardController@ping');
